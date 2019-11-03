@@ -1,5 +1,6 @@
 package com.max.miniproject.domin;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -26,6 +27,7 @@ public class Student {
     @Column(name = "gpa")
     private Double gap;
 
+    @JsonIgnore
     @Transient
     private Integer age;
     @Column(name = "dob")
@@ -52,14 +54,5 @@ public class Student {
         this.dob.setDate(1);
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", first='" + first + '\'' +
-                ", last='" + last + '\'' +
-                ", gap=" + gap +
-                ", dob=" + dob +
-                '}';
-    }
+
 }
