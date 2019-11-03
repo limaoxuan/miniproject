@@ -8,7 +8,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Date;
 
-@ToString
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -50,5 +50,16 @@ public class Student {
         this.dob.setYear(this.dob.getYear() - age);
         this.dob.setMonth(0);
         this.dob.setDate(1);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", first='" + first + '\'' +
+                ", last='" + last + '\'' +
+                ", gap=" + gap +
+                ", dob=" + dob +
+                '}';
     }
 }
