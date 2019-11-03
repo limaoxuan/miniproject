@@ -28,7 +28,11 @@ public class LoadController {
 
     @RequestMapping(value = "/load", method = RequestMethod.GET)
     public List<Student> main() {
-        jobLaunchService.launchJob();
+        int size = studentService.findAllStu().size();
+        if (size == 0) {
+            jobLaunchService.launchJob();
+        }
+
         return studentService.findAllStu();
     }
 }

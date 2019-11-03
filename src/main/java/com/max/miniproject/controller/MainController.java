@@ -21,11 +21,7 @@ public class MainController {
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main() {
-//        jobLaunchService.launchJob();
-//        studentService.save(new Student("max", "li", 4.0, 26));
-//        JobParametersBuilder jobParameters =   new JobParametersBuilder()
-//                .addDate("executeDate", new Da()).toJobParameters();
-//        System.out.println();
+
         return "main";
     }
 }
