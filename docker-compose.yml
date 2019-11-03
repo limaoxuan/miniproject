@@ -11,10 +11,11 @@ services:
     restart: always
 
   max_mini_project:
+    restart: always
     image: life14ok/miniproject
     container_name: max-miniproject
     ports:
-      - 8080:8080
+      - 8099:8099
     volumes:
       - .:/vol/development
     depends_on:
@@ -22,7 +23,7 @@ services:
     links:
       - max-mysql
     environment:
-      - PORT=8080
+      - PORT=8099
       - DATABASE_HOST=max-mysql
       - DATABASE_USER=root
       - DATABASE_PASSWORD=123456
